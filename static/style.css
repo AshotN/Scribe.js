@@ -506,7 +506,7 @@ body {
         .log__message > span {
             display: block;
             overflow: hidden;
-            white-space: pre-wrap;
+            white-space: pre;
             font-size: 12px;
 }
         .log--collapse .log__message > span {
@@ -602,6 +602,11 @@ body {
     /* font-style: italic; */
     color: #676767;
     font-weight: bold;
+    white-space: nowrap;
+}
+
+.log__right {
+    text-align: right;
 }
 
 ng-view.ng-scope {
@@ -800,7 +805,7 @@ button.toggle-button.active {
 }
 
 .log__time_122 {
-    min-width: 122px;
+    /*min-width: 122px;*/
 }
 
 /*

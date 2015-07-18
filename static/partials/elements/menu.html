@@ -25,6 +25,11 @@
         </li>
 
         <li class="action">
+            <h4 class="title">Duration</h4>
+            <ng-toggle ng-model="showDuration"></ng-toggle>
+        </li>
+
+        <li class="action">
 
             <h4 class="title">Order by</h4>
 
@@ -32,6 +37,7 @@
                 <option value="context.time">Time</option>
                 <option value="context.tags">Tags</option>
                 <option value="context.location">File</option>
+                <option value="context.duration">Duration</option>
                 <option value="argsString">Message</option>
             </select>
         </li>

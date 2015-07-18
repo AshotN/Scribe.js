@@ -23,15 +23,21 @@
         </span>
     </span>
 
+    <span class="log__item log__location" ng-if="showFile != 0 && (showFile == 1 || log.show.location)" >
+        <span class="bck-tag">
+            {{log.context.location.filename}}:{{log.context.location.line}}
+        </span>
+    </span>
+
     <span class="log__item log__tags" ng-if="showTags != 0 && (showTags == 1 || log.show.tags)">
         <span>
             <span ng-repeat="tag in log.context.tags" class="log__tag bck-tag">{{handleTags(tag)}}</span>
         </span>
     </span>
 
-    <span class="log__item log__location" ng-if="showFile != 0 && (showFile == 1 || log.show.location)" >
-        <span class="bck-tag">
-            {{log.context.location.filename}}:{{log.context.location.line}}
+    <span class="log__item log__time log__location log__right" ng-if="showDuration != 0 && (showDuration == 1 || log.show.duration)">
+        <span  class="log__time__higher">
+            {{(log.context.duration > 0 ? log.context.duration / 100 : 0).toFixed(3)}} ms
         </span>
     </span>
 

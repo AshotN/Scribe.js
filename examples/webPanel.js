@@ -14,6 +14,7 @@
 
     app.use('/logs', scribe.webPanel());
 
+    app.use(scribe.express.logger()); //Log each request
 
     //Make some logs
     console.addLogger('debug', 'red');
